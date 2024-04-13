@@ -19,8 +19,8 @@ Asegúrate de tener Python 3.x instalado en tu sistema.
 
 ### Ejecución:
 1. Clona o descarga el proyecto del Motor de Encriptación.
-2. Abre una 'Terminal' o 'Command Prompt'
-3. Ubícate en la carpeta raíz del proyecto
+2. Abre una `Terminal` o `Command Prompt`.
+3. Ubícate en la carpeta raíz del proyecto.
 4. Ejecuta la siguiente instrucción:
     ```
     python src\Console\CipherEngineConsole.py
