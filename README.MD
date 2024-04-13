@@ -22,7 +22,9 @@ Asegúrate de tener Python 3.x instalado en tu sistema.
 2. Abre una 'Terminal' o 'Command Prompt'
 3. Ubícate en la carpeta raíz del proyecto
 4. Ejecuta la siguiente instrucción:
-  '''python src\Console\CipherEngineConsole.py'''
+    ```
+    python src\Console\CipherEngineConsole.py
+    ```
 
 ## ¿Cómo está hecho?
 ### Descripción de la arquitectura del proyecto:
