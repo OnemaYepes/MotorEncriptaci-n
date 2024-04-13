@@ -16,7 +16,7 @@ class CipherTest( unittest.TestCase ):
         text_to_encrypt = "Prueba"
         key = "12"
 
-        expected_encrypted_text = "a@DWSS"
+        expected_encrypted_text = "614044575353"
 
         encrypted_text = CipherEngine.EncryptText(text_to_encrypt, key)
 
@@ -27,7 +27,7 @@ class CipherTest( unittest.TestCase ):
         text_to_encrypt = "Emily and Harry were sitting in the park"
         key = "258"
 
-        expected_encrypted_text = "wXQ^LS[\}Y@GAB]@PA\LF\VUQ\LZPBTJY"
+        expected_encrypted_text = "7758515e4c18535b5c127d5940474112425d405018415c4c465c565515515c154c5a501842544a59"
 
         encrypted_text = CipherEngine.EncryptText(text_to_encrypt, key)
 
@@ -38,7 +38,7 @@ class CipherTest( unittest.TestCase ):
         text_to_encrypt = "Los computadores no hacen lo que uno quiere, sino lo que uno les dice"
         key = "2380541"
 
-        expected_encrypted_text = "~\KV[\BFLQQ[CW@^ZYSP]^X^BMUA_]IE\QCWC\Z^_WDATFV_XTA\YVQ"
+        expected_encrypted_text = "7e5c4b10565b5c42464c51515b435740185e5a145953505d5e15585e12424d5515415f5d1349455c5143571f18435c5a5e125f57104441541246565f15585441135c595651"
 
         encrypted_text = CipherEngine.EncryptText(text_to_encrypt, key)
 
@@ -47,9 +47,9 @@ class CipherTest( unittest.TestCase ):
     def test_same_characters_key(self):
         """ Repeated characters input key """
         text_to_encrypt = "Si la vida te da limones"
-        key = "55555"
+        key = "limonada"
 
-        expected_encrypted_text = "f\YTC\QTAPQTY\XZ[PF"
+        expected_encrypted_text = "3f004d030f41120808084d1b0b4100004c050402010f0112"
 
         encrypted_text = CipherEngine.EncryptText(text_to_encrypt, key)
 
@@ -58,9 +58,9 @@ class CipherTest( unittest.TestCase ):
     def test_same_characters_text(self):
         """ Repeated characters input text """
         text_to_encrypt = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-        key = "30372595"
+        key = "repetido"
 
-        expected_encrypted_text = "rqrvstxtrqrvstxtrqrvstxtrqrvstxtrqrvstxtrq"
+        expected_encrypted_text = "332431243528252e332431243528252e332431243528252e332431243528252e332431243528252e3324"
 
         encrypted_text = CipherEngine.EncryptText(text_to_encrypt, key)
 
@@ -71,7 +71,7 @@ class CipherTest( unittest.TestCase ):
         text_to_encrypt = "3.14159265359"
         key = "Pi"
 
-        expected_encrypted_text = "cGa]a\i[f\c\i"
+        expected_encrypted_text = "6347615d615c695b665c635c69"
 
         encrypted_text = CipherEngine.EncryptText(text_to_encrypt, key)
 
@@ -108,7 +108,7 @@ class CipherTest( unittest.TestCase ):
 
     def test_correct_decryption(self):
         """ Normal input encrypted text and key  """
-        encrypted_text = "a@DWSS"
+        encrypted_text = "614044575353"
         key = "12"
 
         expected_og_text = "Prueba"
@@ -119,7 +119,7 @@ class CipherTest( unittest.TestCase ):
 
     def test_correct_decryption2(self):
         """ Normal input encrypted text and key  """
-        encrypted_text = "wXQ^LS[\}Y@GAB]@PA\LF\VUQ\LZPBTJY"
+        encrypted_text = "7758515e4c18535b5c127d5940474112425d405018415c4c465c565515515c154c5a501842544a59"
         key = "258"
 
         expected_og_text = "Emily and Harry were sitting in the park"
@@ -130,7 +130,7 @@ class CipherTest( unittest.TestCase ):
     
     def test_correct_decryption3(self):
         """ Normal input encrypted text and key  """
-        encrypted_text = "~\KV[\BFLQQ[CW@^ZYSP]^X^BMUA_]IE\QCWC\Z^_WDATFV_XTA\YVQ"
+        encrypted_text = "7e5c4b10565b5c42464c51515b435740185e5a145953505d5e15585e12424d5515415f5d1349455c5143571f18435c5a5e125f57104441541246565f15585441135c595651"
         key = "2380541"
 
         expected_og_text = "Los computadores no hacen lo que uno quiere, sino lo que uno les dice"
@@ -141,7 +141,7 @@ class CipherTest( unittest.TestCase ):
 
     def test_alphanumeric_key(self):
         """ Alphanumeric input encryption key """
-        encrypted_text = "R@ES"
+        encrypted_text = "151952401907455302"
         key = "pw12"
 
         expected_og_text = "encriptar"
@@ -152,7 +152,7 @@ class CipherTest( unittest.TestCase ):
 
     def test_one_character_key(self):
         """ One character input encryption key """
-        encrypted_text = "APUCPBEC^"
+        encrypted_text = "41505543504245435e"
         key = "1"
 
         expected_og_text = "padrastro"
@@ -163,7 +163,7 @@ class CipherTest( unittest.TestCase ):
  
     def test_same_cipher_key(self):
         """ Repeated characters input encryption key """
-        encrypted_text = "4	"
+        encrypted_text = "34031603120f0209"
         key = "fffff"
 
         expected_og_text = "Repetido"
@@ -181,21 +181,21 @@ class CipherTest( unittest.TestCase ):
 
     def test_empty_encryption_key(self):
         """ empty input encryption key """
-        encrypted_text = "w@SJMSSJBM@\N_\X\Y"
+        encrypted_text = "0b070a0f1209"
         key = None
 
         self.assertRaises( EmptyKeyError, CipherEngine.DecryptText, encrypted_text, key )
 
     def test_special_character_encryption_key(self): 
         """ special characters input encryption key """
-        encrypted_text = "}/_��T#	"
+        encrypted_text = "0413030809"
         key = "5@lu.dº"
 
         self.assertRaises( KeyCharacterError, CipherEngine.DecryptText, encrypted_text, key )
 
     def test_longer_encryption_key(self):
         """ Input encryption key is longer than the input encrypted text """
-        encrypted_text = "p\GQZ\^A"
+        encrypted_text = "57545e"
         key = "Dispositivodevision"
 
         self.assertRaises( LongerKeyError, CipherEngine.DecryptText, encrypted_text, key )

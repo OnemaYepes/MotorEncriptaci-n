@@ -1,3 +1,5 @@
+#Impotación para modificar texto
+import codecs
 
 class EmptyTextError(Exception):
     """
@@ -83,7 +85,8 @@ class CipherEngine:
             key_to_encrypt = key[index%len(key)]
 
             encrypted_text += chr(ord(text) ^ ord(key_to_encrypt))
-
+        
+        encrypted_text = encrypted_text.encode('utf-8').hex()
         return encrypted_text
 
     def DecryptText(encrypted_text: str, key: str) -> str:
@@ -121,6 +124,7 @@ class CipherEngine:
             raise LongerKeyError("La clave es más larga que el texto a desencriptar.")
 
         decrypted_text = ""
+        encrypted_text = codecs.decode(encrypted_text, 'hex').decode('utf-8')
 
         for index in range(len(encrypted_text)):
             text = encrypted_text[index]
