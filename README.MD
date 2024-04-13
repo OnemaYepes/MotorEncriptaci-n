@@ -19,8 +19,12 @@ Asegúrate de tener Python 3.x instalado en tu sistema.
 
 ### Ejecución:
 1. Clona o descarga el proyecto del Motor de Encriptación.
-2. Navega en la carpeta `src` donde se encuentra una carpeta llamada `Console`
-3. Abrela y Ejecuta el archivo de python `ChiperEngineConsole.py`.
+2. Abre una 'Terminal' o 'Command Prompt'
+3. Ubícate en la carpeta raíz del proyecto
+4. Ejecuta la siguiente instrucción:
+    ```
+    python src\Console\CipherEngineConsole.py
+    ```
 
 ## ¿Cómo está hecho?
 ### Descripción de la arquitectura del proyecto:
