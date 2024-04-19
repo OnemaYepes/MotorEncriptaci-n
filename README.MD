@@ -15,16 +15,30 @@ El Motor de Encriptación es una aplicación que permite encriptar y desencripta
 Para utilizar el Motor de Encriptación, sigue los siguientes pasos:
 
 ### Prerrequisitos:
-Asegúrate de tener Python 3.x instalado en tu sistema.
+- Asegúrate de tener Python 3.x instalado en tu sistema.
 
 ### Ejecución:
 1. Clona o descarga el proyecto del Motor de Encriptación.
 2. Abre una `Terminal` o `Command Prompt`.
 3. Ubícate en la carpeta raíz del proyecto.
-4. Ejecuta la siguiente instrucción:
+4. Debes tener instalado el Framework de `Kivy`. Házlo ejecutando la siguiente instrucción en la terminal posicionado en la raíz del proyecto.
     ```
-    python src\Console\CipherEngineConsole.py
+    python -m pip install "kivy[base]"
     ```
+5. 
+    - Ejecuta la siguiente instrucción si deseas correr el programa por consola:
+        ```
+        python src\Console\CipherEngineConsole.py
+        ```
+    - Ejecuta lo siguiente si quieres correr las pruebas unitarias:
+        ```
+        python test\test_cipher_engine.py
+        ```
+    - Ejecuta lo siguiente si deseas correr la aplicación por consola:
+        ```
+        python src\GUI\CipherGUI.py
+        ```
+
 
 ## ¿Cómo está hecho?
 ### Descripción de la arquitectura del proyecto:
